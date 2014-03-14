@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Designing Cards for Everyone</title>
+<meta name="description" content="Building a tool for journalists and
+    bloggers, the design and data around Embedly Cards">
+    <meta name="author" content="Kawandeep Virdee, @whichlight, @embedly">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+    <script>!function(a){var b="embedly-platform",c="script";if(!a.getElementById(b)){var d=a.createElement(c);d.id=b,d.src=("https:"===document.location.protocol?"https":"http")+"://cdn.embedly.com/widgets/platform.js";var e=document.getElementsByTagName(c)[0];e.parentNode.insertBefore(d,e)}}(document);</script>
+
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round'
+    rel='stylesheet' type='text/css'>
+
+      <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
+    </head>
+
+    <body>
+
+
+      <div class="reveal">
+        <div class="slides">
+          <section data-background="media/cards-background-alpha.png">
+          <h1 id="title"> Designing Cards for Everyone </h1>
+          <br><br>
+
+          <h5 id="title">Kawandeep Virdee, Embedly</h5>
+
+          <h5 id="title">@whichlight, @embedly, #hhbos</h5>
+          </section>
+
+
+          <section>
+          <ul>
+            <h3>Embedly API</h3>
+            <h3 class="fragment">Usage in Journalism</h3>
+            <h3 class="fragment">How we knew to make Cards</h3>
+            <h3 class="fragment">Designing Cards</h3>
+            <h3 class="fragment">Analytics for Publishers</h3>
+          </ul>
+          </section>
+
+          <section><a href="http://embed.ly" target="_blank">
+            <img src="media/onecolor-600.png"></a>
+          </section>
+
+         <section><a href="https://vimeo.com/38421611" target="_blank">
+            https://vimeo.com/38421611</a>
+          </section>
+
+     <section><a href="http://embed.ly/docs/explore/oembed?url=https%3A%2F%2Fvimeo.com%2F38421611" target="_blank">
+            <img height="600px" width="1284px" src="media/json_response.png"</a>
+          </section>
+
+          <section><a href="https://medium.com/p/8d0ffad9fd79" target="_blank">
+            <img src="media/medium_embed.png"></a>
+          </section>
+
+
+
+        <section>
+            <img width="630px" height="600px" src="media/fb_embed.png">
+          </section>
+
+          <section>
+            <img height="600px" width="666px" src="media/discussion_embed.png">
+          </section>
+
+
+          <section>
+            <img width="750px" height="600px" src="media/cat-hypno.gif">
+          </section>
+
+         <section><a href="https://embed.ly/customers" target="_blank">
+            <img width="839px" height=600px" src="media/customers-optimized.gif"></a>
+          </section>
+
+
+          <section>
+          <a href="http://embed.ly" target="_blank">
+            <img src="media/news_customers.png"></a>
+          </section>
+
+          <section>
+            <h3>Usage in Journalism</h3>
+          </section>
+
+          <section><a target="_blank"
+            href="http://www.theguardian.com/world/blog/2014/feb/20/ukraine-crisis-new-clashes-strain-truce-live-updates">
+            <img src="media/guardian.png"></a>
+          </section>
+
+
+          <section><a target="_blank"
+            href="http://news.rapgenius.com/Leah-mcgrath-goodman-the-face-behind-bitcoin-annotated">
+            <img src="media/newsgenius.png"></a>
+          </section>
+
+        <section><a src="http://embed.ly/embed/features/providers"
+            target="_blank">
+            <h4>Media Providers</h4>
+            <img class="fragment" height="100px" src="media/instagram.png">&nbsp &nbsp
+            <img class="fragment" height="100px" src="media/vine.png"> &nbsp &nbsp
+            <img class="fragment" height="100px" src="media/youtube.png">
+            <h4 class="fragment">Media and platforms are merging</h4>
+            </a>
+          </section>
+
+          <section>
+            <ul>
+              <li>Easier embedding cuts across those silos</li>
+              <li class="fragment">More mashups</li>
+              <li class="fragment">Promotes discussions</li>
+            </ul>
+          </section>
+
+          <section><a class="embedly-card" target="_blank"
+            href="https://storify.com/BrownUniversity/brown-s-250th-anniversary-opening-celebration-week">
+            </a>
+          </section>
+
+
+
+          <section>
+            <h3 >Embedded content is in a different context for each site.<h3>
+            <h3 class="fragment">Embeds facilitate a wider range of discussions<h3>
+          </section>
+
+          <section>
+            <h2>How we knew to make Cards</h2>
+          </section>
+
+          <section>
+            <img height="100px" src="media/embed-icon.jpg">
+          </section>
+
+          <section>
+            <img height="100px" src="media/new-embed-icon.png">
+          </section>
+
+          <section>
+          <a href="http://www.108blog.net/embedly-instagram-video/">
+            <img src="media/tutorial-one.png">
+          </a>
+          </section>
+
+          <section>
+          <a href="http://www.108blog.net/embedly-instagram-video/">
+            <img src="media/tutorial-two.png">
+          </a>
+          </section>
+
+          <section>
+          <a href="http://www.108blog.net/embedly-instagram-video/">
+            <img src="media/tutorial-three.png">
+          </a>
+          </section>
+
+          <section>
+            <img src="media/add_embed_button.png">
+          </section>
+
+          <section><a target="_blank"
+            href="http://www.theguardian.com/technology/appsblog/2013/jun/25/instagram-video-vine-brands-agencies">
+            <img src="media/guardian-vid-embed.png"></a>
+          </section>
+
+          <section><a target="_blank"
+            href="http://portalpopline.com.br/katy-perry-dubla-e-danca-ooh-la-la-da-britney-spears-em-video-postado-no-instagram/">
+            <img height="600px" src="media/portalpopline-embed.png"></a>
+          </section>
+
+          <section>
+           <a
+               href="http://insideintercom.io/why-cards-are-the-future-of-the-web/"
+               target="_blank"><img src="media/cards-intercom.png"></a>
+          </section>
+
+          <section>
+<a class="embedly-card"
+    href="http://d13yacurqjgara.cloudfront.net/users/27979/screenshots/798121/32-mobile-devices-icons.png">mobile
+devices</a>
+          </section>
+
+          <section>
+          <h4>Twitter Cards</h4>
+          <img class="fragment" src="media/twitter-card-desktop.png">
+          <img class="fragment" src="media/twitter-card-mobile.png">
+          </section>
+
+          <section>
+
+          <h4>Google Now Cards</h4>
+            <img src="media/google-now-cards.png">
+          </section>
+
+
+          <section>
+          <h3>Cards for Everyone</h3>
+          </section>
+
+          <section>
+            <img  src="media/sketch-button.png">
+          </section>
+
+         <section>
+            <img src="media/sketch-card.png">
+          </section>
+
+          <section>
+            <img  src="media/sketch-image.png">
+          </section>
+
+
+          <section><h2>Designing Cards</h2></section>
+          <section>
+
+          <h4>Title Length</h4>
+          <p><a class="embedly-card" href="http://i.imgur.com/f47VSPC.png">Title Graph</a>
+          </section>
+          <section>
+
+          <h4>Image Width</h4>
+                 <p><a class="embedly-card"
+                    href="http://i.imgur.com/wP9OcFt.png">Image Width</a></p>
+
+          </section>
+          <section>
+
+          <h4>Image Height</h4>
+                            <p><a class="embedly-card"
+                    href="http://i.imgur.com/mrCycun.png">Image Height</a></p>
+
+                  </section>
+                  <section>
+
+          <h4>Description Length</h4>
+                  <p><a class="embedly-card"
+                    href="http://i.imgur.com/VZh4Kyh.png">Description
+                    Length</a></p>
+
+                  </section>
+                  <section>
+
+          <h4>Provider Length</h4>
+                  <p><a class="embedly-card"
+                    href="http://i.imgur.com/t4Jr4gS.png">Provider
+                    Length</a></p>
+
+                  </section>
+
+
+          <section>
+            <img  src="media/draft-embed-ad.png">
+          </section>
+
+
+          <section>
+            <img  src="media/draft-embed-lines.png">
+          </section>
+
+          <section>
+            <img  src="media/draft-embed-bar.png">
+          </section>
+
+
+<section>
+<h3>Responsive and Interactive</h3>
+
+<h3 class="fragment">Balanced branding</h3>
+
+</section>
+
+
+          <section>
+<a class="embedly-card"
+  href="http://www.nytimes.com/projects/2012/snow-fall/?forceredirect=yes#/?part=tunnel-creek">Snow
+  Fall</a>
+</section>
+          </section>
+          <section><h3>Card Types</h3></section>
+
+          <section>
+          <a class="embedly-card" href="https://vimeo.com/67076984">Media for
+            Thinking the Unthinkable</a>
+         </section>
+
+         <section>
+         <a class="embedly-card"
+           href="https://soundcloud.com/whichlight/how-to-pronounce-my-name">How
+           to pronounce my name by whichlight</a>
+         </section>
+
+         <section>
+         <a class="embedly-card"
+           href="http://instagram.com/p/k3tm2SJvzQ/">Instagram</a>
+         </section>
+
+         <section>
+<a class="embedly-card"
+  href="http://www.theguardian.com/cities/2014/mar/11/worlds-best-new-city-app-competition">In
+  search of the world's best new city apps - competition</a>
+         </section>
+
+         <section>
+<a class="embedly-card"
+  href="http://www.amazon.com/Parrot-AR-Drone-Quadricopter-Controlled-Android/dp/B007HZLLOK">Parrot
+  AR.Drone 2.0 Quadricopter Controlled by iPod touch, iPhone, iPad, and Android
+  Devices -Orange/Blue</a>
+         </section>
+
+    <section>
+            <img  src="media/new-embed-input.png">
+          </section>
+
+
+
+          <section>
+          <a class="embedly-card"
+            data-card-via="http://portalpopline.com.br/momento-fofura-blue-ivy-fala-durante-ensaio-e-beyonce-fica-toda-boba/"
+            href="http://instagram.com/p/lP29GSpkMX#">Blue Ivy saying #Sufboard &
+            "Hi Mommy" during Beyoncé's GRAMMY rehearsal. ❤❤❤❤</a>
+          </section>
+
+          <section>
+            <img src="media/portalpopline-instagram-context.png">
+          </section>
+
+          <section>
+          <a class="embedly-card"
+            data-card-via="http://bigfrog104.com/toby-keiths-daughter-krystal-keith-releases-daddy-dance-with-me-video/"
+            href="http://bigfrog104.com/watch-travis-tritt-his-daughter-tyler-reese-sometimes-love-just-aint-enough-video/">Watch
+            Travis Tritt & His Daughter Tyler Reese 'Sometimes Love Just Ain't
+            Enough' Video</a>
+          </section>
+
+          <section>
+            <img src="media/bigfrog-embed-context.png">
+          </section>
+
+
+  <section>
+
+  <a class="embedly-card"
+    data-card-via="http://www.slate.com/articles/arts/books/2014/03/dayal_patterson_s_history_of_black_metal_reviewed.2.html"
+    href="http://www.amazon.com/dp/1936239752/?tag=slatmaga-20">Black Metal:
+    Evolution of the Cult</a>
+          </section>
+
+
+          <section>
+            <img src="media/slate-embed-context.png">
+          </section>
+
+          <section>
+<a class="embedly-card"
+  data-card-via="http://hotsport.rs/2014/03/09/hant-ponistio-penal-nad-sobom-video/#inscore_ifheight_xdc_3269"
+  href="https://vine.co/v/Mq55F2eQvwZ">VIDEO: Aaron #Hunt zeigt sich als großer
+  Sportsmann. Der Bremer weist Gräfe darauf hin, dass es kein Elfer war. #FCNSVW
+  #Skybuli</a>
+
+          </section>
+          <section>
+            <img src="media/hotsport-vine-context.png">
+          </section>
+
+
+
+          <section>
+            <img  src="media/embed-buttons.png">
+          </section>
+
+          <section>
+           <a
+             href="http://www.howardlindzon.com/facebook-whatsapp-wall-street-silion-valley-economic/"
+             target="_blank"><img  src="media/lindzon-button.png"></a>
+          </section>
+
+          <section>
+           <a
+             href="http://mysosyal.blogspot.com.tr/2013/11/vimuo-sayfa-kasma-scripti.html#.Ux88SuddWLs"
+             target="_blank"><img  src="media/mysosyal.png"></a>
+          </section>
+
+         <section>
+           <a
+             href="http://blog.stocktwits.com/these-5-charts-show-how-putin-sent-american-markets-into-total-tailspin/"
+             target="_blank"><img  src="media/stocktwits-button.png"></a>
+          </section>
+
+          <section>
+           <a
+             href="http://blog.embed.ly/post/78667871139/adding-a-custom-embed-button-to-your-blog"
+             target="_blank"><img  src="media/whichlight-button.gif"></a>
+           <img src="media/button-click.gif">
+          </section>
+
+          <section><h2>Analytics for Publishers</h2></section>
+
+          <section>
+            <img height="100px" src="media/hackshackers.gif">&nbsp &nbsp
+            <img class="fragment" height="100px" src="media/blogger.png">&nbsp &nbsp
+            <img class="fragment" height="100px" src="media/guardian-logo.png"> &nbsp &nbsp
+            <img class="fragment" height="100px" src="media/BBC-Logo.jpg">
+            <img class="fragment" height="100px" src="media/nytimes-logo.jpg">
+            <img class="fragment" height="100px" src="media/tumblr-logo.png">
+            <h4 class="fragment">Impressions across sites</h4>
+          </section>
+
+
+          <section>
+          <h4>Media Analytics</h4>
+<a class="embedly-card"
+  href="http://www.funnyordie.com/videos/18e820ec3f/between-two-ferns-with-zach-galifianakis-president-barack-obama">Between
+  Two Ferns with Zach Galifianakis: President Barack Obama</a>
+          </section>
+
+          <section>
+<a class="embedly-card"
+  data-card-via="http://hotsport.rs/2014/03/09/hant-ponistio-penal-nad-sobom-video/#inscore_ifheight_xdc_5365"
+  href="https://vine.co/v/Mq55F2eQvwZ">VIDEO: Aaron #Hunt zeigt sich als großer
+  Sportsmann. Der Bremer weist Gräfe darauf hin, dass es kein Elfer war. #FCNSVW
+  #Skybuli</a>
+          </section>
+
+          <section>
+            <ul>
+              <li >Know where your content is seen</li>
+              <li class="fragment">Better understand your readers</li>
+              <li class="fragment">Inform editorial decisions</li>
+            </ul>
+          </section>
+
+          <section>
+          <h3>To conclude</h3>
+
+            <ul>
+        <li class="fragment">Cards encourage discussions on popular sites as well as the long tail of
+            blogs</li>
+        <li class="fragment">They make it easier to share and re-post content while
+            maintaining attribution.</li>
+        </ul>
+        </section>
+
+          <section>
+          <img height="400px" width="400px" src="media/mind-blown.gif">
+          </section>
+
+        <section>
+        <h3>Thanks!</h3>
+            <p>Questions?<p>
+            <p>I'd love to hear your feedback</p>
+            <p>kawandeep@embed.ly<p>
+            <br><br>
+            <p>Also... <a target="_blank" href="http://embed.ly/jobs">embed.ly/jobs</a></p>
+
+        </section>
+
+        </div>
+      </div>
+
+
+      <div class="footer">
+          <img src="media/logo.png">
+          <div id="name">Designing Cards for Everyone • @embedly •
+                  @whichlight</div>
+      </div>
+
+      <link rel="stylesheet"
+      href="http://embed.ly/static/styles/fontspring-stylesheet.css?v=5706c">
+
+      <script src="//cdn.embedly.com/widgets/platform.js"></script>
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.min.js"></script>
+
+      <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          controls: false,
+          progress: true,
+          history: true,
+          center: true,
+
+          theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+          transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+          // Parallax scrolling
+          // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+          // parallaxBackgroundSize: '2100px 900px',
+
+          // Optional libraries used to extend on reveal.js
+          dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          ]
+        });
+
+      </script>
+    </body>
+</html>
